@@ -32,3 +32,19 @@ This will include parcel as a dev dependency
 
 ```
 
+You can check if your bowser supports WebGL by going on [WebGL](https://get.webgl.org/) and checking if the cube spins. 
+
+By default, if your browser supports WEBGL, then you can check the backend using following code.
+
+```
+console.log(tf.version)
+
+tf.ready().then(() => {
+
+    console.log(tf.getBackend());
+
+});
+
+
+
+```
