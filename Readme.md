@@ -100,6 +100,7 @@ Now that we have server side bindings for tensorflow, we can test it out.
 2. Paste following code🥇
 
 ```javascript
+
 const tf = require('@tensorflow/tfjs');
 require('@tensorflow/tfjs-node');
 
@@ -107,6 +108,7 @@ console.log(tf.version);
 tf.ready().then(() => {
   console.log(tf.getBackend());
 });
+
 ```
 *In windows, you will run into errors as it will ask for for dependencies, However in Mac Big Sur it worked perfectly fine.*
 
@@ -121,8 +123,10 @@ npm i express
 Now you can make an app using following code🥇
 
 ```javascript
+
 const express = require('express');
 const app = express();
+
 ```
 
 Create an endpoint and call it "train"
@@ -148,6 +152,6 @@ app.listen(9000,function(req,res){
 
 ```
 
-Now go to url [localhost:9000/train](localhost:9000/train)
+Now go to url [localhost:9000/train](https://localhost:9000/train)
 
 And you will see the response from the api on the browser webpage.
