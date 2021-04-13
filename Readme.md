@@ -43,6 +43,5 @@ tf.ready().then(() => {
 });
 ```
 ### What is WebGL?
-```
+
 WebGL is a JavaScript API for rendering interactive 2D and 3D graphics within any compatible web browser without the use of plug-ins. WebGL is fully integrated with other web standards, allowing GPU-accelerated usage of physics and image processing and effects as part of the web page canvas.
-```
