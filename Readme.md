@@ -110,3 +110,44 @@ tf.ready().then(() => {
 ```
 *In windows, you will run into errors as it will ask for for dependencies, However in Mac Big Sur it worked perfectly fine.*
 
+NodeJS can also be used to make API endpoints as well.
+The most popular framework for this use case is ExpressJS.
+
+If you want to expose your tensorflowJS code as API, either for training or for making predictions, you can use ExpressJS.
+
+```bash
+npm i express
+```
+Now you can make an app using following code🥇
+
+```javascript
+const express = require('express');
+const app = express();
+```
+
+Create an endpoint and call it "train"
+
+```javascript
+
+app.get('/train', function(req, res){
+
+// demo code < you can include training code here>
+
+console.log(tf.version);
+tf.ready().then(()=>{
+  const msg = `Loaded Tensorflow.js-version is ${tf.version} with backend ${tf.getBackend()}`;
+  console.log(msg);
+  res.send(msg);
+})
+
+app.listen(9000,function(req,res){
+  console.log('Running server on port 9000 ...');
+})
+
+});
+
+```
+
+Now go to url [localhost:9000/train](localhost:9000/train)
+
+And you will see the response from the api on the browser webpage.
