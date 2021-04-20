@@ -1,36 +1,16 @@
 {
-  "name": "toxicity-detector",
+  "name": "tfpractice",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {
-    "@tensorflow/tfjs": "^3.3.0",
-    "@tensorflow/tfjs-backend-wasm": "^3.3.0",
-    "@tensorflow/tfjs-node": "^3.3.0",
-    "node-pre-gyp": "^0.14.0"
-  },
-  "devDependencies": {
-    "parcel-plugin-static-files-copy": "^2.6.0"
-  },
-  "staticFiles": {
-    "staticPath": "./node_modules/@tensorflow/tfjs-backend-wasm/dist",
-    "excludeGlob": [
-      "**/!(*.wasm)"
-    ]
-  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Asim-2000/MachineLearning-JS.git"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Asim-2000/MachineLearning-JS/issues"
-  },
-  "homepage": "https://github.com/Asim-2000/MachineLearning-JS#readme"
+  "dependencies": {
+    "@tensorflow/tfjs": "^3.3.0",
+    "@tensorflow/tfjs-node": "^3.3.0",
+    "tf-kmeans": "0.0.3"
+  }
 }
